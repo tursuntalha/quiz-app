@@ -154,39 +154,39 @@ quiz-app/
 ## Roadmap
 
 ### Phase 1 — Core Quiz Engine
-- [ ] MongoDB schemas: User, QuizSession, Question
-- [ ] Basic quiz flow: display question → accept answer → score → next
-- [ ] Static seed question bank (50 questions across 5 topics)
-- [ ] Timer per question + results summary page
-- [ ] JWT auth: register, login, protected routes
+- [x] MongoDB schemas: User, QuizSession, Question
+- [x] Basic quiz flow: display question → accept answer → score → next
+- [x] Static seed question bank (50 questions across 5 topics)
+- [x] Timer per question + results summary page
+- [x] JWT auth: register, login, protected routes
 
 ### Phase 2 — AI Question Generator
-- [ ] Ollama endpoint integration (`qwen2.5:7b` local)
-- [ ] Prompt engineering: topic + difficulty + count → validated JSON questions
-- [ ] Parse LLM output with retry on malformed JSON
-- [ ] Explanation generator: wrong answers get a follow-up LLM explanation
-- [ ] Cache generated questions per topic to reduce repeated latency
+- [x] Ollama endpoint integration (`qwen2.5:7b` local)
+- [x] Prompt engineering: topic + difficulty + count → validated JSON questions
+- [x] Parse LLM output with retry on malformed JSON
+- [x] Explanation generator: wrong answers get a follow-up LLM explanation
+- [x] Cache generated questions per topic to reduce repeated latency
 
 ### Phase 3 — IRT Difficulty Adaptation
-- [ ] Implement 1-PL IRT model: `P(correct) = sigmoid(θ - b)`
-- [ ] θ update using maximum likelihood after each answer
-- [ ] Select next question: `argmin |b_i - θ|` from available pool
-- [ ] Store θ per topic per user in MongoDB
-- [ ] Visual "difficulty level" indicator during quiz
+- [x] Implement 1-PL IRT model: `P(correct) = sigmoid(θ - b)`
+- [x] θ update using maximum likelihood after each answer
+- [x] Select next question: `argmin |b_i - θ|` from available pool
+- [x] Store θ per topic per user in MongoDB
+- [x] Visual "difficulty level" indicator during quiz
 
 ### Phase 4 — Spaced Repetition Scheduler (SM-2)
-- [ ] Implement SM-2: ease factor, interval, repetition count
-- [ ] Daily review queue: topics due for review surfaced on home page
-- [ ] Separate "Review Mode" (SM-2-scheduled) vs "New Quiz Mode"
-- [ ] Retention curve chart per topic (days since review vs accuracy)
+- [x] Implement SM-2: ease factor, interval, repetition count
+- [x] Daily review queue: topics due for review surfaced on home page
+- [x] Separate "Review Mode" (SM-2-scheduled) vs "New Quiz Mode"
+- [x] Retention curve chart per topic (days since review vs accuracy)
 
 ### Phase 5 — Analytics Dashboard + Leaderboard
-- [ ] Radar chart: accuracy per topic (Chart.js)
-- [ ] Session history timeline
-- [ ] XP system: base + difficulty multiplier per correct answer
-- [ ] Daily streak with freeze protection (1 free skip per week)
-- [ ] Global leaderboard (top 100 by XP, filterable by topic)
-- [ ] PDF export of any quiz session (jsPDF)
+- [x] Radar chart: accuracy per topic (Chart.js)
+- [x] Session history timeline
+- [x] XP system: base + difficulty multiplier per correct answer
+- [x] Daily streak with freeze protection (1 free skip per week)
+- [x] Global leaderboard (top 100 by XP, filterable by topic)
+- [x] PDF export of any quiz session (jsPDF)
 
 ---
 
